@@ -18,8 +18,8 @@ public class Kata2_Histograma {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] data;
-        data = new int[30];
+        Integer[] data;
+        data = new Integer[30];
         
         int LimMax = 15;
         int LimInf = 0;
