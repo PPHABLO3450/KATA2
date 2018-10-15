@@ -8,6 +8,7 @@ package kata2_histograma;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
  *
  * @author pablo
@@ -20,6 +21,7 @@ public class Kata2_Histograma {
     public static void main(String[] args) {
         Integer[] data;
         data = new Integer[30];
+        
         
         int LimMax = 15;
         int LimInf = 0;
