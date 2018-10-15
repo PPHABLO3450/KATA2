@@ -18,7 +18,6 @@ public class Kata2_Histograma {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Map<Integer, Integer> histogram= new HashMap<>();
         int[] data;
         data = new int[30];
         
@@ -29,15 +28,18 @@ public class Kata2_Histograma {
         for(int i = 0;i < data.length;i++){
             data[i] = (int) Math.floor(Math.random()*(LimInf-LimMax+1)+LimMax); 
         }
-       
         
-        for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
+        //Instanciamos un objeto de tipo Histogram que llamaremos histo al que se la pasa data.
+        Histogram histo;
+        histo = new Histogram(data);
+        
+        Map<Integer,Integer> histogr= histo.getHistogram();
+        
+        
         // Recorremos todos los elementos del mapa imprimiendo por consola cada clave 
         // con su valor correspondiente en el histograma
-        histogram.keySet().stream().forEach((Integer key) -> {
-            System.out.println(key+ "==>" + histogram.get(key));
+        histogr.keySet().stream().forEach((Integer key) -> {
+            System.out.println(key+ "==>" + histogr.get(key));
         });
     }
     
