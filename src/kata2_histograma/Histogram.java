@@ -25,8 +25,7 @@ public class Histogram<T> {
         return data;
     }
     
-    
-    
+   
     
     public Map getHistogram(){
         Map<T, Integer> histogram= new HashMap<>();

@@ -19,28 +19,18 @@ public class Kata2_Histograma {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Integer[] data;
-        data = new Integer[30];
-        
-        
-        int LimMax = 15;
-        int LimInf = 0;
-        
-        // Se inicializa el array de enteros con números enteros generados de manera aleatoria entre [LimInf,LimMax]: 
-        for(int i = 0;i < data.length;i++){
-            data[i] = (int) Math.floor(Math.random()*(LimInf-LimMax+1)+LimMax); 
-        }
+        String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
         
         //Instanciamos un objeto de tipo Histogram que llamaremos histo al que se la pasa data.
         Histogram histo;
         histo = new Histogram(data);
         
-        Map<Integer,Integer> histogr= histo.getHistogram();
+        Map<String,Integer> histogr= histo.getHistogram();
         
         
         // Recorremos todos los elementos del mapa imprimiendo por consola cada clave 
         // con su valor correspondiente en el histograma
-        histogr.keySet().stream().forEach((Integer key) -> {
+        histogr.keySet().stream().forEach((String key) -> {
             System.out.println(key+ "==>" + histogr.get(key));
         });
     }
